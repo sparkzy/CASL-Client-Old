@@ -9,8 +9,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-
-
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [],
@@ -24,7 +23,8 @@ import { MatListModule } from '@angular/material/list';
     MatSliderModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatTooltipModule
   ],
   exports: [
     MatGridListModule,
@@ -35,7 +35,8 @@ import { MatListModule } from '@angular/material/list';
     MatSliderModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatTooltipModule
   ]
 })
 export class MaterialModule { }
