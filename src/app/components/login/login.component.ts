@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { UserService } from 'src/app/services/user/user.service';
 
 @Component({
   selector: 'casl-login',
@@ -88,9 +89,21 @@ export class LoginComponent {
     {name: 'Wyoming', abbreviation: 'WY'}
   ];
 
-  constructor(private fb: FormBuilder) {}
+  username = '';
+  password = '';
+
+  constructor(private fb: FormBuilder, private userService: UserService) {}
 
   onSubmit() {
     alert('Thanks!');
+  }
+
+  login() {
+    console.log('Loging in...');
+    console.log(this.userService.getByUsername(this.username));
+  }
+
+  register() {
+    console.log('Registering...');
   }
 }

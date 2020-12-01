@@ -10,14 +10,14 @@
   <mat-grid-tile colspan="2" rowspan="2">
     <mat-form-field appearance="legacy">
       <mat-label>Username</mat-label>
-      <input matInput>
+      <input matInput placeholder="Username" [value]="username">
     </mat-form-field>
   </mat-grid-tile>
 
   <mat-grid-tile colspan="2" rowspan="2">
     <mat-form-field appearance="legacy">
       <mat-label>Password</mat-label>
-      <input matInput [type]="hide ? 'password' : 'text'">
+      <input matInput [type]="hide ? 'password' : 'text'" placeholder="Password" [value]="password">
       <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
         [attr.aria-pressed]="hide" matTooltip="Toggle hide password">
         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -26,11 +26,11 @@
   </mat-grid-tile>
 
   <mat-grid-tile colspan="1">
-    <button mat-raised-button login-button class="login-button" color="primary">Login</button>
+    <button mat-raised-button login-button class="login-button" color="primary" (click)="login()">Login</button>
   </mat-grid-tile>
 
   <mat-grid-tile colspan="1">
-    <button mat-raised-button class="register-button" color="primary">Register</button>
+    <button mat-raised-button register-button class="register-button" color="primary" (click)="register()">Register</button>
   </mat-grid-tile>
 </mat-grid-list>
 
