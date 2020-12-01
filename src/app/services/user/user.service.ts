@@ -55,7 +55,7 @@ export class UserService {
    * @param id number
    */
   getById(id: number): any {
-    this.http.get(`${this.url}/${id}`).subscribe(
+    this.http.get(`${this.url}/id/${id}`).subscribe(
       succ => {
         return succ;
       },
@@ -70,8 +70,9 @@ export class UserService {
    * @param username string
    */
   getByUsername(username: string): any {
-    this.http.get(`${this.url}/${username}`).subscribe(
+    this.http.get(`${this.url}/username/${username}`).subscribe(
       succ => {
+        console.log(`Read ${succ}`);
         return succ;
       },
       err => {
