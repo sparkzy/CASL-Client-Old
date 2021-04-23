@@ -70,6 +70,7 @@ export class UserService {
    * @param username string
    */
   getByUsername(username: string): any {
+    console.log(`${this.url}/username/${username}`);
     this.http.get(`${this.url}/username/${username}`).subscribe(
       succ => {
         console.log(`Read ${succ}`);
