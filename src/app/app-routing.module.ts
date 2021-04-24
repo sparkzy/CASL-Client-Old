@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './components/login/login.component';
+import { CharacterSelectComponent } from './components/character-select/character-select.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full'},
-  { path: '**', redirectTo: 'login', pathMatch: 'full'},
-  { path: 'login', component: LoginComponent}
+  { path: '', redirectTo: 'character/select', pathMatch: 'full'},
+  { path: '**', redirectTo: 'character/select', pathMatch: 'full'},
+  { path: 'character/select', component: CharacterSelectComponent}
 ];
 
 @NgModule({
