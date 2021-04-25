@@ -10,6 +10,7 @@ export class Character {
   private weight: number;
   private species: string;
   private bio: string;
+  private description: string;
   private miscInfo: string;
 
   // HP
@@ -58,9 +59,7 @@ export class Character {
   private items: Item[];
 
   constructor($name: string, $age: number, $height: number, $weight: number, $species: string, $bio: string, $miscInfo: string,
-              $hpMax: number, $hpCurrent: number, $hpTrauma: number, $mentalMax: number, $mentalCurrent: number, $metnalTrauma: number,
-              $staminaMax: number, $staminaCurrent: number, $staminaTrauma: number, $energyMax: number, $energyCurrent: number,
-              $energyTrauma: number, $strength: number, $speed: number, $flexibility: number, $balance: number, $dexterity: number,
+              $description: string, $strength: number, $speed: number, $flexibility: number, $balance: number, $dexterity: number,
               $toughness: number, $reflex: number, $learning: number, $logic: number, $wit: number, $will: number, $fortitude: number,
               $imagination: number, $acuity: number, $spells: Spell[], $abilities: Spell[], $features: Item[], $equipment: Item[],
               $items: Item[]) {
@@ -70,19 +69,7 @@ export class Character {
     this.weight = $weight;
     this.species = $species;
     this.bio = $bio;
-    this.miscInfo = $miscInfo;
-    this.hpMax = $hpMax;
-    this.hpCurrent = $hpCurrent;
-    this.hpTrauma = $hpTrauma;
-    this.mentalMax = $mentalMax;
-    this.mentalCurrent = $mentalCurrent;
-    this.metnalTrauma = $metnalTrauma;
-    this.staminaMax = $staminaMax;
-    this.staminaCurrent = $staminaCurrent;
-    this.staminaTrauma = $staminaTrauma;
-    this.energyMax = $energyMax;
-    this.energyCurrent = $energyCurrent;
-    this.energyTrauma = $energyTrauma;
+    this.description = $description;
     this.strength = $strength;
     this.speed = $speed;
     this.flexibility = $flexibility;
@@ -153,6 +140,14 @@ export class Character {
    */
   public get $bio(): string {
     return this.bio;
+  }
+
+  /**
+   * Getter $descripiton
+   * @return {string}
+   */
+   public get $description(): string {
+    return this.description;
   }
 
   /**
@@ -457,6 +452,14 @@ export class Character {
    */
   public set $bio(value: string) {
     this.bio = value;
+  }
+
+  /**
+   * Setter $description
+   * @param {string} value
+   */
+   public set $description(value: string) {
+    this.description = value;
   }
 
   /**

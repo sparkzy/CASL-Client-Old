@@ -1,11 +1,21 @@
 <mat-grid-list cols="1" rowHeight="5vh">
   <mat-grid-tile colspan="1" rowspan="5">
-    <button mat-raised-button color="primary">New Character</button>
+    <button mat-raised-button color="primary" (click)="newCharacter()">New Character</button>
   </mat-grid-tile>
 
-  <mat-grid-tile colspan="1" rowspan="5">
-    <h2 class="mat-display-3">Upload existing character</h2>
+  <mat-grid-tile colspan="1" rowspan="6">
+    <!-- <h2 class="mat-display-3">Upload existing character</h2> -->
+    <div class="center">
+      <ngx-file-drop dropZoneLabel="Drop file here" (onFileDrop)="dropped($event)" (onFileOver)="fileOver($event)"
+        (onFileLeave)="fileLeave($event)" accept=".json">
+        <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+          <button mat-button color="primary" (click)="openFileSelector()">Drag and drop, or browse for existing character</button>
+        </ng-template>
+      </ngx-file-drop>
+    </div>
   </mat-grid-tile>
+
+
 
   <!-- <mat-grid-tile colspan="2" rowspan="2">
     <mat-form-field appearance="legacy">
