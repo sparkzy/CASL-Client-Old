@@ -1,0 +1,50 @@
+<mat-grid-list cols="12" rowHeight="4vh">
+  <mat-grid-tile colspan="12" rowspan="2">
+    <mat-form-field appearance="fill">
+      <mat-label>Spell name</mat-label>
+      <input matInput type="text" placeholder="Spell name" [(ngModel)]="name">
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="12" rowspan="2">
+    <button mat-flat-button color="accent" (click)="addEffect()">Add effect</button>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="2" rowspan="2" *ngFor="let name of effects; let i = index">
+    <mat-form-field appearance="fill">
+      <mat-label>Effect {{ i }}</mat-label>
+      <input matInput type="text" placeholder="Effect Name" [(ngModel)]="effects[i]">
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="12" rowspan="1"></mat-grid-tile>
+  <mat-grid-tile colspan="4" rowspan="2">
+    <button mat-flat-button color="accent" (click)="addSomatic()">Add somatic component</button>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="4" rowspan="2">
+    <button mat-flat-button color="accent" (click)="addMaterial()">Add material component</button>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="4" rowspan="2">
+    <button mat-flat-button color="accent" (click)="addVerbal()">Add verbal component</button>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="2" rowspan="2" *ngFor="let som of somatic; let i = index">
+    <mat-form-field appearance="fill">
+      <input matInput type="text" placeholder="Somatic component" [(ngModel)]="somatic[i]">
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="2" rowspan="2" *ngFor="let mat of material">
+    <mat-form-field appearance="fill">
+      <input matInput type="text" placeholder="Material component" [(ngModel)]="material[i]">
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="2" rowspan="2" *ngFor="let verb of verbal">
+    <mat-form-field appearance="fill">
+      <input matInput type="text" placeholder="Verbal component" [(ngModel)]="verbal[i]">
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="12" rowspan="2">
+    <mat-form-field appearance="fill">
+      <textarea matInput placeholder="Description" [(ngModel)]="description"></textarea>
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="12" rowspan="2">
+    <button mat-flat-button color="warning" (click)="createSpell()">Create Spell</button>
+  </mat-grid-tile>
+</mat-grid-list>

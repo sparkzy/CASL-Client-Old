@@ -12,13 +12,15 @@ import { CharacterSelectComponent } from './components/character-select/characte
 import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
 import { MaterialModule } from './modules/material/material.module';
+import { SpellCreationComponent } from './components/spell-creation/spell-creation.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     LoginComponent,
     CharacterSelectComponent,
-    CharacterCreationComponent
+    CharacterCreationComponent,
+    SpellCreationComponent
   ],
   imports: [
     BrowserModule,

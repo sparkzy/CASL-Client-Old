@@ -1,154 +1,164 @@
-<mat-grid-list cols="8" rowHeight="4vh">
-  <!-- INFO -->
-  <mat-grid-tile colspan="8" rowspan="2.5">
-    <mat-form-field appearance="fill">
-      <mat-label>Name</mat-label>
-      <input matInput type="text" placeholder="Adventurer" [(ngModel)]="name">
-      <!-- <mat-error *ngIf="fontSizeControl.invalid">Min size: 10px</mat-error> -->
-    </mat-form-field>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="8" rowspan="1">
-    <mat-form-field appearance="fill">
-      <mat-label>Age</mat-label>
-      <input matInput type="number" placeholder="0" min="0" [(ngModel)]="age">
-      <span matSuffix>years</span>
-    </mat-form-field>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="8" rowspan="1">
-    <mat-form-field appearance="fill">
-      <mat-label>Height</mat-label>
-      <input matInput type="number" placeholder="0" min="0" [(ngModel)]="height">
-      <span matSuffix>cm</span>
-    </mat-form-field>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="8" rowspan="1">
-    <mat-form-field appearance="fill">
-      <mat-label>Weight</mat-label>
-      <input matInput type="number" placeholder="0" min="0" [(ngModel)]="weight">
-      <span matSuffix>kg</span>
-    </mat-form-field>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="8" rowspan="1">
-    <mat-form-field appearance="fill">
-      <mat-label>Species</mat-label>
-      <input matInput type="text" placeholder="Human" [(ngModel)]="species">
-    </mat-form-field>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="8" rowspan="1">
-    <mat-form-field appearance="fill">
-      <mat-label>Bio</mat-label>
-      <input matInput type="text" placeholder="Once upon a time..." [(ngModel)]="bio">
-    </mat-form-field>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="8" rowspan="1">
-    <mat-form-field appearance="fill">
-      <mat-label>Description</mat-label>
-      <textarea matInput type="textarea" placeholder="Looking good!" [(ngModel)]="description"></textarea>
-    </mat-form-field>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="8" rowspan="1">
-    <mat-form-field appearance="fill">
-      <mat-label>Misc. Info</mat-label>
-      <textarea matInput placeholder="Anyting else?" [(ngModel)]="miscInfo"></textarea>
-    </mat-form-field>
-  </mat-grid-tile>
+<mat-tab-group mat-align-tabs="center">
+  <mat-tab label="Tell me about yourself...">
+    <mat-grid-list cols="12" rowHeight="8vh">
+      <!-- INFO -->
+      <mat-grid-tile colspan="12" rowspan="2.5">
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput type="text" placeholder="Adventurer" [(ngModel)]="name">
+          <!-- <mat-error *ngIf="fontSizeControl.invalid">Min size: 10px</mat-error> -->
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="3" rowspan="1">
+        <mat-form-field appearance="fill">
+          <mat-label>Age</mat-label>
+          <input matInput type="number" placeholder="0" min="0" [(ngModel)]="age">
+          <span matSuffix>years</span>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="3" rowspan="1">
+        <mat-form-field appearance="fill">
+          <mat-label>Height</mat-label>
+          <input matInput type="number" placeholder="0" min="0" [(ngModel)]="height">
+          <span matSuffix>cm</span>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="3" rowspan="1">
+        <mat-form-field appearance="fill">
+          <mat-label>Weight</mat-label>
+          <input matInput type="number" placeholder="0" min="0" [(ngModel)]="weight">
+          <span matSuffix>kg</span>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="3" rowspan="1">
+        <mat-form-field appearance="fill">
+          <mat-label>Species</mat-label>
+          <input matInput type="text" placeholder="Human" [(ngModel)]="species">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="12" rowspan="2">
+        <mat-form-field appearance="fill">
+          <mat-label>Bio</mat-label>
+          <textarea matInput type="text" placeholder="Once upon a time..." [(ngModel)]="bio"></textarea>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="12" rowspan="2">
+        <mat-form-field appearance="fill">
+          <mat-label>Description</mat-label>
+          <textarea matInput type="textarea" placeholder="Looking good!" [(ngModel)]="description"></textarea>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="12" rowspan="2">
+        <mat-form-field appearance="fill">
+          <mat-label>Misc. Info</mat-label>
+          <textarea matInput placeholder="Anyting else?" [(ngModel)]="miscInfo"></textarea>
+        </mat-form-field>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-tab>
+  <mat-tab label="Attributes">
+    <mat-grid-list cols="7" rowHeight="8vh">
+      <!-- Attributes -->
+      <!-- <mat-grid-tile colspan="1" rowspan="4">Attributes</mat-grid-tile> -->
+      <!-- Physical -->
+      <mat-grid-tile colspan="7" rowspan="1">Physical</mat-grid-tile>
+      <mat-grid-tile colspan="1" rowspan="1">
+        <mat-form-field appearance="fill">
+          <mat-label>Strength</mat-label>
+          <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="strength">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1" rowspan="1">
+        <mat-form-field appearance="fill">
+          <mat-label>Speed</mat-label>
+          <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="speed">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1" rowspan="1">
+        <mat-form-field appearance="fill">
+          <mat-label>Flexibility</mat-label>
+          <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="flexibility">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1" rowspan="1">
+        <mat-form-field appearance="fill">
+          <mat-label>Balance</mat-label>
+          <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="balance">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1" rowspan="1">
+        <mat-form-field appearance="fill">
+          <mat-label>Dexterity</mat-label>
+          <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="dexterity">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1" rowspan="1">
+        <mat-form-field appearance="fill">
+          <mat-label>Toughness</mat-label>
+          <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="toughness">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1" rowspan="1">
+        <mat-form-field appearance="fill">
+          <mat-label>Reflex</mat-label>
+          <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="reflex">
+        </mat-form-field>
+      </mat-grid-tile>
+      <!-- Mental -->
+      <mat-grid-tile colspan="7" rowspan="1">Mental</mat-grid-tile>
+      <mat-grid-tile colspan="1" rowspan="1">
+        <mat-form-field appearance="fill">
+          <mat-label>Learning</mat-label>
+          <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="learning">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1" rowspan="1">
+        <mat-form-field appearance="fill">
+          <mat-label>Logic</mat-label>
+          <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="logic">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1" rowspan="1">
+        <mat-form-field appearance="fill">
+          <mat-label>Wit</mat-label>
+          <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="wit">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1" rowspan="1">
+        <mat-form-field appearance="fill">
+          <mat-label>Will</mat-label>
+          <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="will">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1" rowspan="1">
+        <mat-form-field appearance="fill">
+          <mat-label>Fortitude</mat-label>
+          <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="fortitude">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1" rowspan="1">
+        <mat-form-field appearance="fill">
+          <mat-label>Imagination</mat-label>
+          <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="imagination">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1" rowspan="1">
+        <mat-form-field appearance="fill">
+          <mat-label>Acuity</mat-label>
+          <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="acuity">
+        </mat-form-field>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-tab>
+  <mat-tab label="S.A.F.E.">
+    <casl-spell-creation (newSpellEvent)="addSpell($event)"></casl-spell-creation>
+  </mat-tab>
+</mat-tab-group>
 
-  <!-- Attributes -->
-  <mat-grid-tile colspan="1" rowspan="4">Attributes</mat-grid-tile>
-  <!-- Physical -->
-  <mat-grid-tile colspan="7" rowspan="1">Physical</mat-grid-tile>
-  <mat-grid-tile colspan="1" rowspan="1">
-    <mat-form-field appearance="fill">
-      <mat-label>Strength</mat-label>
-      <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="strength">
-    </mat-form-field>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="1" rowspan="1">
-    <mat-form-field appearance="fill">
-      <mat-label>Speed</mat-label>
-      <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="speed">
-    </mat-form-field>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="1" rowspan="1">
-    <mat-form-field appearance="fill">
-      <mat-label>Flexibility</mat-label>
-      <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="flexibility">
-    </mat-form-field>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="1" rowspan="1">
-    <mat-form-field appearance="fill">
-      <mat-label>Balance</mat-label>
-      <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="balance">
-    </mat-form-field>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="1" rowspan="1">
-    <mat-form-field appearance="fill">
-      <mat-label>Dexterity</mat-label>
-      <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="dexterity">
-    </mat-form-field>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="1" rowspan="1">
-    <mat-form-field appearance="fill">
-      <mat-label>Toughness</mat-label>
-      <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="toughness">
-    </mat-form-field>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="1" rowspan="1">
-    <mat-form-field appearance="fill">
-      <mat-label>Reflex</mat-label>
-      <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="reflex">
-    </mat-form-field>
-  </mat-grid-tile>
-  <!-- Mental -->
-  <mat-grid-tile colspan="7" rowspan="1">Mental</mat-grid-tile>
-  <mat-grid-tile colspan="1" rowspan="1">
-    <mat-form-field appearance="fill">
-      <mat-label>Learning</mat-label>
-      <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="learning">
-    </mat-form-field>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="1" rowspan="1">
-    <mat-form-field appearance="fill">
-      <mat-label>Logic</mat-label>
-      <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="logic">
-    </mat-form-field>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="1" rowspan="1">
-    <mat-form-field appearance="fill">
-      <mat-label>Wit</mat-label>
-      <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="wit">
-    </mat-form-field>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="1" rowspan="1">
-    <mat-form-field appearance="fill">
-      <mat-label>Will</mat-label>
-      <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="will">
-    </mat-form-field>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="1" rowspan="1">
-    <mat-form-field appearance="fill">
-      <mat-label>Fortitude</mat-label>
-      <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="fortitude">
-    </mat-form-field>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="1" rowspan="1">
-    <mat-form-field appearance="fill">
-      <mat-label>Imagination</mat-label>
-      <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="imagination">
-    </mat-form-field>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="1" rowspan="1">
-    <mat-form-field appearance="fill">
-      <mat-label>Acuity</mat-label>
-      <input matInput type="number" placeholder="1" min="1" max="9" [(ngModel)]="acuity">
-    </mat-form-field>
-  </mat-grid-tile>
+<!-- S.A.F.E. -->
+<!-- Spells/Skills -->
+<!-- Abilities -->
+<!-- Features -->
+<!-- Equipment -->
 
-  <!-- S.A.F.E. -->
-  <!-- Spells/Skills -->
-  <!-- Abilities -->
-  <!-- Features -->
-  <!-- Equipment -->
-
-  <!-- Items -->
-</mat-grid-list>
+<!-- Items -->

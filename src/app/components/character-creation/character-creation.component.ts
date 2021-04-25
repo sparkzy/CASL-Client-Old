@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Item } from 'src/app/beans/item';
+import { Spell } from 'src/app/beans/spell';
 
 @Component({
   selector: 'casl-character-creation',
@@ -38,11 +40,20 @@ export class CharacterCreationComponent implements OnInit {
   imagination: number;
   acuity: number;
 
-  constructor(formBuilder: FormBuilder) {
+  // S.A.F.E.
+  spells = [];
+  abilities = [];
+  features = [];
+  equipemnt = [];
 
-  }
+  items = [new Item()];
 
-  ngOnInit(): void {
+  constructor(formBuilder: FormBuilder) { }
+
+  ngOnInit(): void { }
+
+  addSpell(newSpell: Spell): void {
+    this.spells.push(newSpell);
   }
 
 }
